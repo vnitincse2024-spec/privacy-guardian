@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Guardian - Digital Footprint Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h1>Privacy Guardian</h1>
+            </div>
+            <p class="subtitle">Digital Footprint Scanner</p>
+        </header>
+
+        <main>
+            <nav class="tabs">
+                <button class="tab active" data-tab="scan">New Scan</button>
+                <button class="tab" data-tab="results" disabled>Results</button>
+            </nav>
+
+            <section id="scan" class="tab-content active">
+                <div class="hero">
+                    <h2>Scan Your Digital Footprint</h2>
+                    <p>Discover what information about you is publicly available online and get personalized privacy recommendations</p>
+                </div>
+
+                <div class="form-section">
+                    <h3>Enter Your Information</h3>
+                    <p class="form-subtitle">Provide the data points you want to scan. All information is processed securely.</p>
+
+                    <form id="scanForm">
+                        <div class="form-group">
+                            <label for="emails">
+                                <span class="icon">Email Addresses</span>
+                            </label>
+                            <input type="text" id="emails" placeholder="email@example.com, another@example.com">
+                            <small>Separate multiple emails with commas</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="usernames">
+                                <span class="icon">Usernames/Handles</span>
+                            </label>
+                            <input type="text" id="usernames" placeholder="myusername, another_handle">
+                            <small>Separate multiple usernames with commas</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="social">
+                                <span class="icon">Social Media Profile Links (Optional)</span>
+                            </label>
+                            <textarea id="social" placeholder="https://twitter.com/username" rows="3"></textarea>
+                            <small>One URL per line</small>
+                        </div>
+
+                        <button type="submit" class="btn-scan">Start Full Scan</button>
+                    </form>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <h4>Email Exposure Check</h4>
+                        <p>Scans public breach databases to identify if your emails appear in known data leaks</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Username Analysis</h4>
+                        <p>Searches for your usernames across multiple platforms to detect reuse patterns</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Social Media Audit</h4>
+                        <p>Analyzes public profile visibility and identifies exposed personal information</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results" class="tab-content">
+                <div id="resultsContent"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
